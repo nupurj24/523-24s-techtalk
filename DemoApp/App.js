@@ -1,19 +1,11 @@
-import { StyleSheet, Text, View, ScrollView, Image, TextInput } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View accessible={true} style={styles.container}>
-      <View alignItems='center'>
-        <Text> Welcome to the Flocator!</Text>
-        <Image
-          source={require ('./assets/uterus.png')
-          }
-          style={{width: 320, height: 200, }}
-        />
-      </View>
-      <TextInput
-        defaultValue='Enter Input Here'
-      />
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
     </View>
   );
 }
@@ -23,7 +15,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'top',
-    top: 20
+    justifyContent: 'center',
   },
 });

@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, ScrollView, Image, TextInput, FlatList, Section
 
 export default function App() {
   return (
-    <ScrollView accessible={true} style={styles.container}>
+    <View accessible={true} style={styles.container}>
       <View alignItems='center'>
         <Text> Welcome to the Flocator!</Text>
         <Image
@@ -19,7 +19,7 @@ export default function App() {
         {backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'pink',}]}> */}
         <Text style={styles.text}>Submit</Text>
       </Pressable>
-    </ScrollView>
+    </View>
   );
 }
 
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    //alignItems: 'center',
-    //justifyContent: 'top',
+    alignItems: 'center',
+    justifyContent: 'top',
     top: 20
   },
   button: {
