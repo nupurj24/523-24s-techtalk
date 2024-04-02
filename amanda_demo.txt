@@ -1,0 +1,47 @@
+import { StyleSheet, Text, View, ScrollView, Image, TextInput, FlatList, SectionList, Button, Pressable } from 'react-native';
+
+export default function App() {
+  return (
+    <View accessible={true} style={styles.container}>
+      <View alignItems='center'>
+        <Text> Welcome to the Flocator!</Text>
+        <Image
+          source={require ('./assets/uterus.png')
+          }
+          style={{width: 320, height: 200, }}
+        />
+      </View>
+      <TextInput
+        defaultValue='Enter Input Here'
+      />
+      <Pressable style={styles.button}>
+      {/* style={({pressed}) => [
+        {backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'pink',}]}> */}
+        <Text style={styles.text}>Submit</Text>
+      </Pressable>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'top',
+    top: 20
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 4,
+    backgroundColor: 'pink',
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+});
